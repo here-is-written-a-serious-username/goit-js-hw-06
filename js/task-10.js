@@ -12,6 +12,9 @@ divBoxes.style = 'display: flex; gap: 5px; flex-wrap: wrap;';
 
 
 btnCreate.addEventListener("click", onBtnCreateClick);
+btnDestroy.addEventListener("click", onBtnDestroyClick);
+
+
 
 function onBtnCreateClick() {
   const amount = input.value;
@@ -19,7 +22,6 @@ function onBtnCreateClick() {
 }
 
 function createBoxes(amount) {
-  
   const divBoxesArray = [];
 
   if (divBoxes.lastElementChild === null) {
@@ -56,15 +58,12 @@ function createBoxes(amount) {
       console.log(size);
 
       divBoxesArray.push(divBox);
-    }    
+    }
   }
-
   divBoxes.append(...divBoxesArray);
-  
 }
 
 
-btnDestroy.addEventListener("click", onBtnDestroyClick);
 
 function onBtnDestroyClick() {
   divBoxes.innerHTML = '';
