@@ -12,7 +12,7 @@ function onValidatorInputBlur(event) {
     if (inputContentLength === Number(input.dataset.length)) {
         input.classList.remove('invalid');
         input.classList.add('valid');
-    } else if (inputContentLength !== Number(input.dataset.length)) {
+    } else {
         input.classList.remove('valid');
         input.classList.add('invalid');
     };

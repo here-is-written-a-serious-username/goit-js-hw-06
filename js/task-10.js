@@ -18,29 +18,50 @@ function onBtnCreateClick() {
 }
 
 function createBoxes(amount) {
+  
+  const divBoxesArray = [];
 
-  const divBoxesArrey = [];
-  let size = 20;
+  if (divBoxes.lastElementChild === null) {
+    let size = 20;
 
-  for (let i = 1; i <= amount; i += 1) {
-    const divBox = document.createElement("div");
-    divBox.style.backgroundColor = getRandomHexColor();
+    for (let i = 1; i <= amount; i += 1) {
+      const divBox = document.createElement("div");
+      divBox.style.backgroundColor = getRandomHexColor();
 
-    size += 10;
-    const sizeBox = `${size}px`;
+      size += 10;
+      const sizeBox = `${size}px`;
 
-    divBox.style.width = sizeBox;
-    divBox.style.height = sizeBox;
+      divBox.style.width = sizeBox;
+      divBox.style.height = sizeBox;
 
-    console.log(size);
+      console.log(size);
 
-    divBoxesArrey.push(divBox);
+      divBoxesArray.push(divBox);
+    }
+  }
+  else {
+    let size = Number.parseInt(divBoxes.lastElementChild.style.width);
+    // const elHeight = divBoxes.lastElementChild.style.height;
+    for (let i = 1; i <= amount; i += 1) {
+      const divBox = document.createElement("div");
+      divBox.style.backgroundColor = getRandomHexColor();
 
+      size += 10;
+      const sizeBox = `${size}px`;
+
+      divBox.style.width = sizeBox;
+      divBox.style.height = sizeBox;
+
+      console.log(size);
+
+      divBoxesArray.push(divBox);
+    }    
   }
 
-  divBoxes.append(...divBoxesArrey);
-
+  divBoxes.append(...divBoxesArray);
+  
 }
+
 
 btnDestroy.addEventListener("click", onBtnDestroyClick);
 

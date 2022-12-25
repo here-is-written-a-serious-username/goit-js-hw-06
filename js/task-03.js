@@ -15,8 +15,10 @@ const images = [
 
 const ulGalleryEl = document.querySelector(".gallery");
 
-images.map(imgMaker);
+const markup = images.map(imgMaker).join("");
 
-function imgMaker (img) {
-  ulGalleryEl.insertAdjacentHTML("beforeend", `<li><img src= ${img.url} alt = ${img.alt} width=480 height =320 ></li>`);
+function imgMaker(img) {
+  return `<li><img src= ${img.url} alt= "${img.alt}" width=480 height =320 ></li>`;
 }
+
+ulGalleryEl.insertAdjacentHTML("beforeend", markup);

@@ -23,5 +23,8 @@ function onFormSubmit (event) {
         
     // console.log(`Email: ${email.value}, Password: ${password.value}`);
 
-    event.currentTarget.reset();
+    if (email.value !== "" && password.value !== "") {
+        event.currentTarget.reset();
+    }
+    
 }
