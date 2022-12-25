@@ -6,6 +6,7 @@ const btnCreate = document.querySelector("[data-create]");
 const btnDestroy = document.querySelector("[data-destroy]");
 const divBoxes = document.querySelector("#boxes");
 
+console.log(`привіт! чи є можливість глянути інші варіанти рішення цієї задачки? сорі за спам)`)
 
 divBoxes.style = 'display: flex; gap: 5px; flex-wrap: wrap;';
 
