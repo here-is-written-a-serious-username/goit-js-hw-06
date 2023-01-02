@@ -6,7 +6,7 @@ const btnCreate = document.querySelector("[data-create]");
 const btnDestroy = document.querySelector("[data-destroy]");
 const divBoxes = document.querySelector("#boxes");
 
-
+// let size = 20;
 
 divBoxes.style = 'display: flex; gap: 5px; flex-wrap: wrap;';
 
@@ -50,6 +50,7 @@ function createBoxes(amount) {
 
 function onBtnDestroyClick() {
   divBoxes.innerHTML = '';
+  // size = 20;
 }
 
 function getRandomHexColor() {
